@@ -1,9 +1,8 @@
-// main.js
-
 // === CONFIG SUPABASE ===
-// REPLACE with your actual Supabase project credentials
-const SUPABASE_URL = 'https://your-project-id.supabase.co';
-const SUPABASE_ANON_KEY = 'your-anon-key';
+// Đã điền sẵn URL dựa trên ảnh chụp màn hình của bạn
+const SUPABASE_URL = 'https://gadunkmhysfgbdqmcbev.supabase.co';
+// Đã điền sẵn Publishable key của bạn
+const SUPABASE_ANON_KEY = 'sb_publishable_bBZBHrbbgVJHsVJSbwvCcw_CvM7CiQO';
 
 // Initialize Supabase client
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
