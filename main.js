@@ -1,5 +1,11 @@
 // main.js
 
+// Bật thông báo lỗi toàn cục ra màn hình để debug dễ dàng hơn
+window.onerror = function(message, source, lineno, colno, error) {
+    alert("Lỗi JavaScript hệ thống: " + message + " (Dòng " + lineno + ":" + colno + ")");
+    return false;
+};
+
 // === CONFIG SUPABASE ===
 const SUPABASE_URL = 'https://gadunkmhysfgbdqmcbev.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_bBZBHrbbgVJHsVJSbwvCcw_CvM7CiQO';
@@ -74,7 +80,9 @@ const statusBox = document.getElementById('inlineFormStatus');
 
 if (inlineForm && statusBox) {
     inlineForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Stop standard form submission (prevents page refresh)
+        e.preventDefault(); // Ngăn trang bị tải lại
+        
+        alert("Đã nhận lệnh gửi Form! Bắt đầu xử lý dữ liệu...");
         
         // Disable submit button
         const submitBtn = inlineForm.querySelector('button[type="submit"]');
@@ -103,9 +111,11 @@ if (inlineForm && statusBox) {
                 if (window.supabase) {
                     supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                 } else {
-                    throw new Error('Không thể tải thư viện kết nối (Supabase SDK). Vui lòng kiểm tra lại kết nối Internet.');
+                    throw new Error('Không thể tải thư viện kết nối (Supabase SDK). Vui lòng kiểm tra lại mạng Internet.');
                 }
             }
+
+            alert("Đang kết nối tới Supabase để gửi thông tin:\n" + JSON.stringify(data));
 
             // Insert booking row into Supabase
             const { error } = await supabase
@@ -120,6 +130,8 @@ if (inlineForm && statusBox) {
                 throw error;
             }
 
+            alert("Supabase phản hồi: THÀNH CÔNG!");
+
             // Success state
             statusBox.textContent = 'Gửi yêu cầu thành công! TC FIX sẽ liên hệ lại với bạn sớm qua SĐT/Zalo.';
             statusBox.className = 'form-status success';
@@ -127,6 +139,7 @@ if (inlineForm && statusBox) {
             inlineForm.reset();
 
         } catch (err) {
+            alert("Lỗi khi gửi lên Supabase:\n" + err.message);
             console.error('Submission error details:', err);
             statusBox.textContent = err.message || 'Gửi yêu cầu thất bại. Vui lòng liên hệ Hotline trực tiếp.';
             statusBox.className = 'form-status error';
