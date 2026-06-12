@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC FIX - Sports Repair Experts | Dịch Vụ Sửa Chữa Đồ Thể Thao Cao Cấp</title>
+    <meta name="description" content="Chuyên spa giày, phục hồi màu, sửa chữa giày & mũ bảo hiểm, phun nhám và cân chỉnh vợt Pickleball chuyên nghiệp tại Long Biên, Hà Nội.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background overlay elements for abstract golden glows -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="brand-logo">
+                <svg class="logo-svg-small" viewBox="0 0 200 200" width="50" height="50">
+                    <defs>
+                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffe699" />
+                            <stop offset="50%" stop-color="#d4af37" />
+                            <stop offset="100%" stop-color="#8a6f27" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#gold-grad)" stroke-width="6" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="url(#gold-grad)" stroke-width="1.5" stroke-dasharray="6,6" />
+                    <!-- Crossed racket and wrench -->
+                    <line x1="50" y1="50" x2="150" y2="150" stroke="url(#gold-grad)" stroke-width="6" stroke-linecap="round" />
+                    <line x1="150" y1="50" x2="50" y2="150" stroke="url(#gold-grad)" stroke-width="6" stroke-linecap="round" />
+                    <text x="100" y="120" font-family="'Montserrat', sans-serif" font-size="65" font-weight="900" fill="url(#gold-grad)" text-anchor="middle" letter-spacing="-3">TC</text>
+                </svg>
+                <div class="brand-names">
+                    <span class="brand-title">TC FIX</span>
+                    <span class="brand-subtitle">SPORTS REPAIR EXPERTS</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#services" class="nav-link">Dịch Vụ</a>
+                <a href="#about" class="nav-link">Cam Kết</a>
+                <a href="#booking-section" class="nav-link">Đặt Lịch</a>
+                <a href="tel:0911386816" class="nav-btn-hotline">Hotline: 0911.386.816</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Premium Banner -->
+        <section class="hero-banner">
+            <div class="banner-overlay"></div>
+            <div class="container hero-container-grid">
+                <div class="hero-content">
+                    <div class="tagline">🛠️ Chuyên Gia Sửa Chữa Đồ Thể Thao</div>
+                    <h1 class="hero-main-title">
+                        DỊCH VỤ SỬA CHỮA &<br>
+                        CUNG CẤP THIẾT BỊ<br>
+                        <span class="gold-text-glow">THỂ THAO CHÍNH HÃNG</span>
+                    </h1>
+                    <p class="hero-description">
+                        Đội ngũ kỹ thuật viên tay nghề cao chuyên phục hồi, vệ sinh chuyên sâu giày, mũ bảo hiểm và tối ưu hóa hiệu suất vợt Pickleball hàng đầu tại Hà Nội.
+                    </p>
+                    <div class="hero-badges">
+                        <span class="h-badge">Chất Lượng Đỉnh Cao</span>
+                        <span class="h-badge">Dịch Vụ Chu Đáo</span>
+                        <span class="h-badge">Uy Tín Hàng Đầu</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#booking-section" class="btn btn-gold btn-lg pulse-anim">Đăng Ký Dịch Vụ Ngay</a>
+                        <a href="tel:0911386816" class="btn btn-outline-white btn-lg">
+                            Gọi Hotline tư vấn
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Large Logo Banner Frame -->
+                <div class="hero-banner-logo-frame">
+                    <div class="logo-circle-glow">
+                        <svg class="hero-logo-svg" viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="gold-shiny" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#fff6cc" />
+                                    <stop offset="25%" stop-color="#ffd700" />
+                                    <stop offset="60%" stop-color="#c59b27" />
+                                    <stop offset="100%" stop-color="#8a6805" />
+                                </linearGradient>
+                                <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+                            <!-- Outer decorative borders -->
+                            <circle cx="100" cy="100" r="88" fill="none" stroke="url(#gold-shiny)" stroke-width="2" opacity="0.4" />
+                            <circle cx="100" cy="100" r="82" fill="none" stroke="url(#gold-shiny)" stroke-width="5" />
+                            <circle cx="100" cy="100" r="72" fill="none" stroke="url(#gold-shiny)" stroke-width="1.5" stroke-dasharray="4,4" />
+                            
+                            <!-- Crossed tools background symbols -->
+                            <!-- Wrench (Left-Top to Right-Bottom) -->
+                            <path d="M 50 50 L 150 150" stroke="url(#gold-shiny)" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+                            <!-- Pickleball Racket (Right-Top to Left-Bottom) -->
+                            <path d="M 150 50 L 50 150" stroke="url(#gold-shiny)" stroke-width="8" stroke-linecap="round" opacity="0.9" />
+                            
+                            <!-- Compass tips / Sparkles -->
+                            <polygon points="100,2 105,18 95,18" fill="url(#gold-shiny)" />
+                            <polygon points="100,198 105,182 95,182" fill="url(#gold-shiny)" />
+                            <polygon points="2,100 18,105 18,95" fill="url(#gold-shiny)" />
+                            <polygon points="198,100 182,105 182,95" fill="url(#gold-shiny)" />
+
+                            <!-- Central TC Text -->
+                            <text x="100" y="122" font-family="'Montserrat', sans-serif" font-size="75" font-weight="900" fill="url(#gold-shiny)" text-anchor="middle" filter="url(#glow-effect)" style="letter-spacing:-4px;">TC</text>
+                        </svg>
+                        <div class="logo-subtext-overlay">TC FIX</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section with Rich Details -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">SERVICES</span>
+                    <h2 class="section-title">DANH MỤC DỊCH VỤ CHUYÊN NGHIỆP</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Column 1: Shoes & Helmets -->
+                    <div class="service-card-group">
+                        <div class="group-header">
+                            <div class="group-icon-wrap bg-gold-gradient">
+                                <svg class="group-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 16v-2a4 4 0 0 1 4-4h8l3.6 4.8a1 1 0 0 1 .1.9l-.7 2.1a1 1 0 0 1-.9.7H5a1 1 0 0 1-1-1z" />
+                                    <path d="M12 10V6a2 2 0 0 0-2-2H8" />
+                                    <path d="M16 10l-2-3" />
+                                </svg>
+                            </div>
+                            <div class="group-header-text">
+                                <h3>SPA GIÀY & MŨ BẢO HIỂM</h3>
+                                <p>Phục hồi diện mạo, kéo dài tuổi thọ đồ dùng</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-cards-list">
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-popular">Khuyên dùng</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 8v8M8 12h8"/>
+                                    </svg>
+                                    <h4>Spa Giày Vệ Sinh Chuyên Sâu</h4>
+                                </div>
+                                <p>Làm sạch vết bẩn cứng đầu bằng tay, khử mùi diệt khuẩn tia cực tím UV, dưỡng chất liệu da/vải cao cấp giúp chống mốc và giữ form.</p>
+                                <a href="#booking-section" class="card-arrow">Đăng ký nhanh →</a>
+                            </div>
+
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-new">Kỹ thuật cao</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                                    </svg>
+                                    <h4>Sửa Chữa Giày (Khâu, Dán, Thay Đế)</h4>
+                                </div>
+                                <p>Sử dụng keo dán chuyên dụng chịu nhiệt và lực kéo lớn, khâu viền đế giấu chỉ chắc chắn, phục hồi hoặc thay thế các phần đế bị mòn rách.</p>
+                                <a href="#booking-section" class="card-arrow">Đăng ký nhanh →</a>
+                            </div>
+
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-none">Độ bền cao</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19C5.02345 19.167 5.09343 19.401 5.04578 19.6318C4.94726 20.1085 4.89678 20.6001 4.89678 21.1034C4.89678 21.5986 5.29821 22 5.79338 22H12Z" />
+                                    </svg>
+                                    <h4>Phục Hồi Màu & Sơn Lại Giày</h4>
+                                </div>
+                                <p>Tẩy ố vàng phần đế (unyellowing), phục hồi màu nguyên bản cho da lộn, sơn phủ đổi màu thời trang theo yêu cầu của khách hàng.</p>
+                                <a href="#booking-section" class="card-arrow">Đăng ký nhanh →</a>
+                            </div>
+
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-none">An toàn</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 11a10 10 0 0 1 20 0v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" />
+                                        <path d="M5 16v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1" />
+                                        <path d="M2 11h20" />
+                                    </svg>
+                                    <h4>Vệ Sinh & Phục Hồi Mũ Bảo Hiểm</h4>
+                                </div>
+                                <p>Làm sạch sâu đệm mút trong mũ, khử trùng vi khuẩn, thay kính chắn gió bị trầy xước, thay dây quai mũ bảo hiểm các loại (Fullface, 3/4, nửa đầu).</p>
+                                <a href="#booking-section" class="card-arrow">Đăng ký nhanh →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Pickleball -->
+                    <div class="service-card-group">
+                        <div class="group-header">
+                            <div class="group-icon-wrap bg-gold-gradient">
+                                <svg class="group-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="10" cy="10" r="7" />
+                                    <path d="M15 15l6 6" />
+                                    <line x1="7" y1="10" x2="13" y2="10" />
+                                    <line x1="10" y1="7" x2="10" y2="13" />
+                                </svg>
+                            </div>
+                            <div class="group-header-text">
+                                <h3>DỊCH VỤ VỢT PICKLEBALL</h3>
+                                <p>Căn chỉnh thông số, tối ưu hiệu suất thi đấu</p>
+                            </div>
+                        </div>
+
+                        <div class="service-cards-list">
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-hot">Hot Service</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <path d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+                                    </svg>
+                                    <h4>Phun Nhám Mặt Vợt Chuyên Sâu</h4>
+                                </div>
+                                <p>Tái tạo lớp nhám nhám khí động học nguyên bản cho mặt vợt Carbon/Fiberglass đã mòn, tăng độ bám ma sát giúp đánh xoáy (spin) tối đa.</p>
+                                <a href="#booking-section" class="card-arrow">Đăng ký nhanh →</a>
+                            </div>
+
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-none">Độ bám tốt</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    <h4>Bảo Dưỡng Trọn Gói Vợt</h4>
+                                </div>
+                                <p>Thay dây quấn cán (Grip) chống trượt, dán viền bảo vệ vợt chống va đập xước xát mặt vợt, thêm chì dán thay đổi trọng lượng.</p>
+                                <span class="card-arrow">→ Đăng ký nhanh</span>
+                            </div>
+
+                            <div class="service-detail-card">
+                                <div class="card-meta">
+                                    <span class="service-badge-tag tag-new">Chuyên nghiệp</span>
+                                </div>
+                                <div class="service-card-title-row">
+                                    <svg class="service-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="4" y1="21" x2="4" y2="14" />
+                                        <line x1="4" y1="10" x2="4" y2="3" />
+                                        <line x1="12" y1="21" x2="12" y2="12" />
+                                        <line x1="12" y1="8" x2="12" y2="3" />
+                                        <line x1="20" y1="21" x2="20" y2="16" />
+                                        <line x1="20" y1="12" x2="20" y2="3" />
+                                        <line x1="1" y1="14" x2="7" y2="14" />
+                                        <line x1="9" y1="8" x2="15" y2="8" />
+                                        <line x1="17" y1="16" x2="23" y2="16" />
+                                    </svg>
+                                    <h4>Kiểm Tra & Cân Chỉnh Trọng Lượng</h4>
+                                </div>
+                                <p>Đo đạc điểm cân bằng (balance point) và Swingweight, căn chỉnh phân bố trọng lượng đầu vợt/cán vợt giúp gia tăng lực đập bóng và điểm ngọt (Sweetspot).</p>
+                                <span class="card-arrow">→ Đăng ký nhanh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee Commitments (Highlights) -->
+        <section id="about" class="commitments-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">COMMITMENTS</span>
+                    <h2 class="section-title">CAM KẾT CHẤT LƯỢNG TỪ TC FIX</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="commitments-grid">
+                    <div class="commitment-card">
+                        <div class="comm-icon-box">
+                            <svg class="commitment-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <h4>CHÍNH HÃNG 100%</h4>
+                        <p>Chúng tôi chỉ sử dụng các dòng keo dán cao cấp, sơn chuyên dụng da giày Angelus (Mỹ) và phụ kiện linh kiện vợt thể thao nhập khẩu chính hãng.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <div class="comm-icon-box">
+                            <svg class="commitment-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <h4>KỸ THUẬT CAO</h4>
+                        <p>Trang bị máy ép nhiệt chân không chuyên dụng, súng phun sơn khí nén mịn mượt và máy đo Swingweight vợt Pickleball hiện đại đạt chuẩn.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <div class="comm-icon-box">
+                            <svg class="commitment-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h4>DỊCH VỤ UY TÍN</h4>
+                        <p>Quy trình kiểm tra kỹ lưỡng, tư vấn nhiệt tình đúng tình trạng lỗi. Chế độ bảo hành bung keo, sờn mặt vợt rõ ràng từ 1 đến 3 tháng.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <div class="comm-icon-box">
+                            <svg class="commitment-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                        </div>
+                        <h4>NHANH CHÓNG</h4>
+                        <p>Cam kết xử lý nhanh, lấy liền đối với dịch vụ thay grip vợt, dán bảo vệ. Dịch vụ spa giày lấy chỉ sau 24h - 48h làm việc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inline Booking Registration Form Section -->
+        <section id="booking-section" class="booking-section">
+            <div class="container">
+                <div class="booking-grid-layout">
+                    <!-- Left Promo Content -->
+                    <div class="booking-promo">
+                        <div class="booking-promo-tag">BOOKING FORM</div>
+                        <h2>ĐĂNG KÝ DỊCH VỤ SỬA CHỮA</h2>
+                        <p class="promo-text">
+                            Chỉ mất 30 giây để điền thông tin đăng ký. Đội ngũ kỹ thuật viên của TC FIX sẽ liên hệ ngay qua Zalo/SĐT để xác nhận lỗi, báo giá chính xác và hướng dẫn cách thức giao nhận đồ sửa.
+                        </p>
+                        
+                        <div class="promo-steps">
+                            <div class="step-item">
+                                <div class="step-num">1</div>
+                                <div>
+                                    <h5>Điền Form đăng ký</h5>
+                                    <p>Nhập thông tin liên hệ và đồ dùng cần sửa chữa.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">2</div>
+                                <div>
+                                    <h5>Nhận báo giá chi tiết</h5>
+                                    <p>Chúng tôi gọi điện tư vấn phương án sửa kèm báo giá.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-num">3</div>
+                                <div>
+                                    <h5>Gửi đồ & nhận lại đồ mới</h5>
+                                    <p>Hỗ trợ lấy đồ tận nơi hoặc gửi ship COD tiện lợi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Booking Form Box -->
+                    <div class="booking-form-box">
+                        <h3>THÔNG TIN ĐẶT DỊCH VỤ</h3>
+                        <div class="divider"></div>
+                        <form id="inlineBookingForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="regName">Họ tên của bạn *</label>
+                                    <input type="text" id="regName" name="regName" required placeholder="Nguyễn Văn A">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="regPhone">Số điện thoại *</label>
+                                    <input type="tel" id="regPhone" name="regPhone" required placeholder="09xx xxx xxx">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="regService">Dịch vụ yêu cầu *</label>
+                                    <select id="regService" name="regService" required>
+                                        <option value="" disabled selected>-- Chọn dịch vụ cần làm --</option>
+                                        <optgroup label="Giày & Mũ bảo hiểm">
+                                            <option value="Spa Giày Chuyên Sâu">Spa Giày Vệ Sinh Chuyên Sâu</option>
+                                            <option value="Sửa Chữa Giày">Sửa Chữa Giày (Khâu, Dán, Thay Đế)</option>
+                                            <option value="Phục Hồi Màu Sơn">Phục Hồi Màu & Sơn Lại Giày</option>
+                                            <option value="Spa Mũ Bảo Hiểm">Vệ Sinh & Phục Hồi Mũ Bảo Hiểm</option>
+                                        </optgroup>
+                                        <optgroup label="Vợt Pickleball">
+                                            <option value="Phun Nhám Mặt Vợt">Phun Nhám Mặt Vợt</option>
+                                            <option value="Bảo Dưỡng Thay Grip">Bảo Dưỡng Vợt / Thay Grip</option>
+                                            <option value="Cân Chỉnh Swingweight">Kiểm Tra & Cân Chỉnh Trọng Lượng</option>
+                                        </optgroup>
+                                        <option value="Dịch vụ khác">Yêu cầu sửa chữa khác...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="regNotes">Mô tả tình trạng đồ dùng cần xử lý</label>
+                                    <textarea id="regNotes" name="regNotes" rows="3" placeholder="Ví dụ: Giày đá bóng bị hở mũi lớn, vợt Pickleball bị nhẵn mặt bóng..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-gold w-100 py-3 submit-btn">
+                                Gửi Yêu Cầu Đăng Ký
+                            </button>
+                            <div id="inlineFormStatus" class="form-status hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Rich Information -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo footer-logo">
+                        <svg class="logo-svg-small" viewBox="0 0 200 200" width="45" height="45">
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="url(#gold-grad)" stroke-width="6" />
+                            <text x="100" y="120" font-family="'Montserrat', sans-serif" font-size="65" font-weight="900" fill="url(#gold-grad)" text-anchor="middle" letter-spacing="-3">TC</text>
+                        </svg>
+                        <span class="brand-title">TC FIX</span>
+                    </div>
+                    <p class="brand-desc">Sports Repair Experts - Dịch vụ chăm sóc, bảo dưỡng đồ thể thao chuyên nghiệp hàng đầu tại Hà Nội.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>ĐIỀU HƯỚNG</h4>
+                    <ul>
+                        <li><a href="#services">Dịch vụ sửa chữa</a></li>
+                        <li><a href="#about">Cam kết chất lượng</a></li>
+                        <li><a href="#booking-section">Đăng ký đặt lịch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <div class="c-info-line">
+                        <svg class="footer-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span class="c-val">Số 16/ngách 202/12 Đường Cổ Linh, Long Biên, Hà Nội</span>
+                    </div>
+                    <div class="c-info-line">
+                        <svg class="footer-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span class="c-val"><a href="tel:0911386816" class="gold-text-hover">0911.386.816</a></span>
+                    </div>
+                    <div class="c-info-line">
+                        <svg class="footer-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        <span class="c-val">Facebook: TC FIX</span>
+                    </div>
+                    <div class="c-info-line">
+                        <svg class="footer-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                        </svg>
+                        <span class="c-val">TikTok: @tcfix.shoes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 TC FIX. Designed for ultimate athletic performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Hotline Call Action Button -->
+    <a href="tel:0911386816" class="floating-hotline" title="Gọi Hotline Ngay">
+        <svg class="floating-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span class="floating-label">Hotline</span>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
